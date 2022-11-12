@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrunmai's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script src="https://kit.fontawesome.com/b62fdb8e7c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <a href="./index.html"><img src="images/Logo.png" class="logo"/></a>
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="Mrunmai-Abhyankar-Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header-text">
+                    <p>UI Developer</p>
+                    <h1>Hi, I'm <br><span>Mrunmai Abhyankar</span></h1>
+                </div>      
+                <img src="images/dp_no_bg.png" class="illustration">
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------about---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/ProfilePic.png" alt="photo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    
+                    <p class="about-me">I am an aspiring UX Developer. With passion for art and creativity, I love creating designs, illustrations and apps. Currently enrolled in Pune Institute of Computer Technology as a Final Year student, Computer Science, I am a frontend developer trying to fuse technology with creativity.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>App Development</span><br>Developing applications in Flutter</li>
+                            <li><span>Illustrations</span><br>Drawing pretty illustrations</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Flutter Developer Intern</span><br>Fans Incorporated</li>
+                            <li><span>Flutter Developer Intern</span><br>HealMe IT Solutions</li>
+                            <li><span>Cyber Security Intern</span><br>Bosleo Technology</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>BE- Computer Engineering</span><br>Pune Institute of Computer Technology</li>
+                            <li><span>Class XIIth</span><br>DAV Public School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------about---------- -->
+
+    <!-- ------------portfolio------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Featured Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Aarogyam.png">
+                    <div class="layer">
+                        <h3>Aarogyam - A Digital Wellness Application</h3>
+                        <p>An interactive application to maintain digital wellbeing in the technology-driven world</p>
+                        <a href="./aarogyam.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Vaishwik.png">
+                    <div class="layer">
+                        <h3>Vaishwik - A Digital Art Gallery</h3>
+                        <p>A tablet application for an art gallery to buy and sell artwork online</p>
+                        <a href="./vaishwik.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/ParkIt Thumbnail.png">
+                    <div class="layer">
+                        <h3>ParkIt - A New Way of Parking</h3>
+                        <p>A seamless application to manage and book parking spots in advance.</p>
+                        <a href="./parkit.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.behance.net/mrunmai-abhyankar/" target="_blank" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- ------------contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <hr class="solid">
+            <div class="contact-info">
+                <h3>LET'S CONNECT</h3>
+                <a href="mailto:abhyankarmrunmai@gmail.com" class="mail-id">abhyankarmrunmai@gmail.com</a>
+                <div class="icon-row">
+                    <a href="https://www.linkedin.com/in/mrunmai-abhyankar/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.behance.net/mrunmai-abhyankar/"><i class="fa-brands fa-square-behance"></i></a>
+                    <a href="https://www.instagram.com/pix.el1080/"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <p> © Nov 2022 • Designed and Coded by Mrunmai Abhyankar</p>
+            </div>
+            
+        </div>
+        
+    </div>
+
+<script>
+    var tabLinks = document.getElementsByClassName("tab-links");
+    var tabContents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tabLink of tabLinks){
+            tabLink.classList.remove("active-link");
+        }
+        for(tabContent of tabContents){
+            tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+
+</script>
+</body>
+</html>
